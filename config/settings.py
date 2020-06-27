@@ -29,7 +29,7 @@ ALLOWED_HOSTS = []
 
 
 # Application definition
-DJANGO_APPS= [  
+DJANGO_APPS = [
     "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",
@@ -38,12 +38,16 @@ DJANGO_APPS= [
     "django.contrib.staticfiles",
 ]
 
-PROJECT_APP=[
-    "users.apps.UsersConfig",   
+THIRD_PARTY_APPS = ["django_countries"]
+
+PROJECT_APP = [
+    "users.apps.UsersConfig",
+    "rooms.apps.RoomsConfig",
+    "core.apps.CoreConfig",
 ]
 
 
-INSTALLED_APPS = DJANGO_APPS+PROJECT_APP
+INSTALLED_APPS = DJANGO_APPS + PROJECT_APP + THIRD_PARTY_APPS
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
